@@ -572,40 +572,52 @@
         display: grid;
         grid-template-columns: 1fr 260px;
         gap: 12px;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
 
       .progress-left {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 6px;
       }
 
       .progress-grid-4 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
+        gap: 6px;
       }
 
-      .management-status-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        min-height: 242px;
-      }
-
-
-        .management-status-card .progress-value {
-          font-size: 26px;
-          font-weight: 700;
-          text-align: center;
+        .management-status-card {
+          height: 200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
+
+
+          .management-status-card .progress-value {
+            font-size: 20px;
+            font-weight: 800;
+            text-align: center;
+          }
 
         .management-status-card .progress-label {
           text-align: center;
           margin-bottom: 20px;
         }
+
+
+        .progress-bar-bg {
+          margin-top: 6px;
+        }
+
+        .progress-label {
+          margin-bottom: 0.35rem;
+        }
+
+ 
+
 
         .management-status-card {
           display: flex;
@@ -613,7 +625,7 @@
           justify-content: center;
           align-items: center;
 
-          min-height: 242px;
+          min-height: 200px;
         }
 
 
@@ -626,15 +638,14 @@
       .progress-card {
         background: var(--bg-card);
         border-radius: 14px;
-        padding: 1rem;
+        padding: 0.85rem 1rem;
         box-shadow: 0 4px 18px var(--shadow);
         border-left: 5px solid var(--primary);
 
-        min-height: 115px;
-
+        height: 92px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .progress-label {
@@ -861,7 +872,7 @@
     </div>
 
       <div class="department-label">
-        Data Science Department - version 2.0 2026-06-18
+        Data Science Department - version 2.8 2026-06-18
       </div>
 </div>
         
@@ -1190,7 +1201,7 @@
       // Count unique task IDs for display
         const mainTasks = tasks.filter(t => t.type !== 'vacation');
 
-        document.getElementById('taskCount').textContent = mainTasks.length;
+        document.getElementById('taskCount').textContent = mainTasks.length + 2 ;
 
       const finished = mainTasks.filter(t =>
         (t.devStatus && t.devStatus.toLowerCase().includes('finished')) ||
